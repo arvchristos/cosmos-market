@@ -1,0 +1,9 @@
+{
+    "name": "ical-filter-proxy",
+    "description": "Reads an iCal URL, parses it according to user defined rules and serves a filtered version .",
+    "longDescription": "<p>Reads an iCal URL, parses it according to user defined rules and serves a filtered version .</p>",
+    "tags": ["calendar", "filter", "ical", "proxy"],
+    "repository": "https://github.com/darkphnx/ical-filter-proxy",
+    "image": "https://hub.docker.com/r/darkphnx/ical-filter-proxy",
+    "supported_architectures": ["amd64", "arm64"]
+}

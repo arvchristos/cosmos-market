@@ -1,0 +1,48 @@
+{
+    "cosmos-installer": {
+      "form": [
+        {
+          "name": "configFile",
+          "label": "Configuration file",
+          "initialValue": "{DefaultDataPath}/config.yml",
+          "type": "text"
+        }
+      ]
+    },
+    "minVersion": "0.4.0",
+    "services": {
+      "{ServiceName}": {
+        "image": "darkphnx/ical-filter-proxy:latest",
+        "container_name": "{ServiceName}",
+        "restart": "unless-stopped",
+        "environment": [],
+        "labels": {
+          "cosmos-auto-update": "true",
+          "cosmos-icon": "https://azukaar.github.io/cosmos-servapps-official/servapps/Unpackerr/icon.png",
+           "cosmos-force-network-secured": "true"
+        },
+        "volumes": [
+          {
+            "source": "{Context.configFile}",
+            "target": "/app/config.yml",
+            "type": "bind"
+          }
+        ],
+        "routes": [
+            {
+                "name": "{ServiceName}",
+                "description": "Expose {ServiceName} to the web",
+                "useHost": true,
+                "target": "http://{ServiceName}:8000",
+                "mode": "SERVAPP",
+                "Timeout": 14400000,
+                "ThrottlePerMinute": 12000,
+                "BlockCommonBots": true,
+                "SmartShield": {
+                    "Enabled": true
+                }
+            }
+        ]
+      }
+    }
+}
