@@ -19,7 +19,7 @@
         "labels": {
           "cosmos-auto-update": "true",
           "cosmos-icon": "https://azukaar.github.io/cosmos-servapps-official/servapps/Unpackerr/icon.png",
-           "cosmos-force-network-secured": "true"
+          "cosmos-force-network-secured": "true"
         },
         "volumes": [
           {
