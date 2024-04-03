@@ -1,13 +1,5 @@
 {
     "cosmos-installer": {
-      "form": [
-        {
-          "name": "configFile",
-          "label": "Configuration file",
-          "initialValue": "{DefaultDataPath}/config.yml",
-          "type": "text"
-        }
-      ]
     },
     "minVersion": "0.4.0",
     "services": {
