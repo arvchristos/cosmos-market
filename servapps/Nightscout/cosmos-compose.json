@@ -13,8 +13,8 @@
           "INSECURE_USE_HTTP='true'",
           "MONGO_CONNECTION=mongodb://{ServiceName}-mongo:27017/nightscout",
           "API_SECRET=passwordpassword",
-          "ENABLE: careportal rawbg iob",
-          "AUTH_DEFAULT_ROLES: denied"
+          "ENABLE=careportal rawbg iob",
+          "AUTH_DEFAULT_ROLES= denied"
         ],
         "labels": {
           "cosmos-auto-update": "true",
