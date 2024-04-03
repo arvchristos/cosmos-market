@@ -14,7 +14,7 @@
           "MONGO_CONNECTION=mongodb://{ServiceName}-mongo:27017/nightscout",
           "API_SECRET=passwordpassword",
           "ENABLE=careportal rawbg iob",
-          "AUTH_DEFAULT_ROLES= denied"
+          "AUTH_DEFAULT_ROLES=denied"
         ],
         "labels": {
           "cosmos-auto-update": "true",
@@ -37,8 +37,11 @@
             }
         ]
       },
+
       "{ServiceName}-mongo": {
         "image": "mongo:4.4",
+        "container_name": "{ServiceName}-mongo",
+        "hostname": "{ServiceName}-mongo",
         "labels": {
           "cosmos-icon": "https://arvchristos.github.io/cosmos-market/servapps/Nightscout/icon_mongo.png"
         },
